@@ -58,7 +58,7 @@ button {
 }
 
 .random {
-    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
     color: white;
 }
 
