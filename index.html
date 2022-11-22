@@ -9,8 +9,10 @@
     <body>
         <div class="header">
             <div class="title">Etch-a-Sketch</div>
-            <button class="board-size">Select Size</button>
+            <button id="popup" onclick="getSize()">Select Size</button>
         </div>
+        <div id="popup"></div>
+        <div id="message"></div>
         <div class="board"></div>
         <div class="footer">
             <button class="black">Black</button>
