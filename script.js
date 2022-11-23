@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
     
-
     let btn_popup = document.querySelector("#popup");
     btn_popup.addEventListener("click", function() {
         let size = getSize();
@@ -24,5 +23,17 @@ document.addEventListener("DOMContentLoaded", function () {
         let board = document.querySelector(".board");
         board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
         board.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+
+        let numSquares = size * size;
+
+        for (i = 0; i < numSquares; i++) {
+            let square = document.createElement("square");
+            square.addEventListener("mouseover", colorSquare);
+            board.insertAdjacentElement("beforeend", square);
+
+            function colorSquare() {
+                square.style.backgroundColor = "black";
+            }
+        }
     }
 })
