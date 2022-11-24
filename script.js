@@ -33,7 +33,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
             function colorSquare() {
                 square.style.backgroundColor = "black";
-            }
+                let btn_black = document.querySelector(".black");
+                let btn_random = document.querySelector(".random");
+                
+                btn_black.addEventListener("click", function() {
+                    return square.style.backgroundColor = "black";
+                })
+                
+                btn_random.addEventListener("click", function() {
+                    return square.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+                })
+        }
         }
     }
 })
